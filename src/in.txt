@@ -5,7 +5,7 @@ mirage 13
 mouse 16
 minsk 15
 minsky 8
-minty 20
+mintys 20
 mime 3
 mine 19
 minions 17
