@@ -50,11 +50,13 @@ korosu
 
 karetachi
 
+
 kanojo
 
 kare
 
 karetachi
+
 
 kare
 
