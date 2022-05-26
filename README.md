@@ -19,8 +19,11 @@ trying to do this task
 
 Пример:
 stdin
+
 5
+
 kare 10
+
 kanojo 20
 karetachi 10
 korosu 7
