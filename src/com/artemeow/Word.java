@@ -12,6 +12,9 @@ public class Word {
         this.frequency = frequency;
     }
 
+    public Word() {
+    }
+
     public String getWord() {
         return word;
     }
@@ -39,5 +42,13 @@ public class Word {
     @Override
     public int hashCode() {
         return Objects.hash(word);
+    }
+
+    @Override
+    public String toString() {
+        return "\n" + "Word{" +
+                "word='" + word + '\'' +
+                ", frequency=" + frequency +
+                '}';
     }
 }

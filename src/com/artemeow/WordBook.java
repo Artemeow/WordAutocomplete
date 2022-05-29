@@ -14,8 +14,14 @@ public class WordBook {
     public boolean addWord(Word word) {
         if(!WordBookValidator.itsTrueWord(word))
             return false;
-        word.setWord(word.getWord().toLowerCase());
 
         return wordBook.add(word);
+    }
+
+    @Override
+    public String toString() {
+        return "WordBook{" +
+                "wordBook=" + wordBook +
+                '}';
     }
 }

@@ -1,5 +1,6 @@
-10
+14
 miracle 15
+miracle 14
 mira 11
 mirage 13
 mouse 16

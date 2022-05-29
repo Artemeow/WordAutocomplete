@@ -1,13 +1,22 @@
 package com.artemeow;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
-import java.util.Dictionary;
 
-public class Main {
+public class WordAutocompleteApplication {
 
+
+    public static Word parseString(String str) {
+        String[] strs = str.strip().split(" ");
+
+        try {
+            return new Word(strs[0], Integer.parseInt(strs[1]));
+        }
+        catch (Exception e) {
+            return new Word();
+        }
+    }
     public static void main(String[] args) {
 
         try (FileReader fileReader = new FileReader("./src/in.txt")) {
@@ -21,7 +30,12 @@ public class Main {
             String[] strs = str.split("\r\n");
             int wordsCount = Integer.parseInt(strs[0]);
 
-            Arrays.stream(strs).forEach(System.out::println);
+            WordBook wordBook = new WordBook();
+            for(int i = 1; i <= wordsCount; i++) {
+                wordBook.addWord(parseString(strs[i]));
+            }
+            System.out.println(wordBook);
+            //Arrays.stream(strs).forEach(System.out::println);
         } catch (IOException e) {
             e.printStackTrace();
         }
